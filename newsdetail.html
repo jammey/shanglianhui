@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.4.min.js"></script>
+    <script src="scripts/Swipe.js"></script>
+    <script src="scripts/jquery.md5.js"></script>
+    <script src="internalScripts/resource.js"></script>
+    <script src="internalScripts/common.js"></script>
+    <script src="internalScripts/core.js"></script>
+    <script src="internalScripts/newsdetail.js"></script>
+    <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+    <link href="css/idangerous.swiper.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="page" id="pageNewsDetail" data-theme="d" data-toggle="false">
+        <div data-role="header">
+            <a href="#" data-icon="custom" data-iconpos="notext" data-role="button" data-rel="back" class="header-icon-cback"></a>
+            <h2>新闻详情</h2>
+            <a id="pageNewsDetail_like" href="#" data-icon="custom" data-iconpos="notext" data-role="button" class="header-icon-clike" style="display: none;"></a>
+        </div>
+        <div class="ui-content">
+            <div style="font-weight: bold;font-size: 16px;" id="pageNewsDetail_title"></div>
+            <div class="ui-grid-a" style="font-size: 12px;margin: 10px 0;">
+                <div class="ui-block-a" style="width: 70%">
+                    <span id="pageNewsDetail_date"></span>&nbsp;&nbsp;
+                    <span id="pageNewsDetail_reprint"></span>
+                </div>
+                <div class="ui-block-b" style="width: 30%;text-align: right;">
+                    <span style="position: relative;">
+                        <img src="images/iconfont-yanjing.png" style="width: 12px;right: 2px;position: absolute;top:2px;" />
+                    </span>
+                    <span id="pageNewsDetail_viewCount"></span>
+                </div>
+            </div>
+            <div id="pageNewsDetail_htmlContent">
+                
+            </div>
+        </div>
+        <div id="standardFooter" data-role="footer" data-fullscreen="false" data-position="fixed" data-toggle="false" data-theme="c">
+        </div>
+    </div>
+</body>
+</html>
+

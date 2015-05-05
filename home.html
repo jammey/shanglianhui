@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.4.min.js"></script>
+    <script src="scripts/jquery.md5.js"></script>
+    <script src="scripts/Swipe.js"></script>
+    <script src="internalScripts/common.js"></script>
+    <script src="internalScripts/core.js"></script>
+    <script src="internalScripts/index.js"></script>
+    <script src="internalScripts/home.js"></script>
+    <script src="internalScripts/userlogin.js"></script>
+    <script src="internalScripts/userregcomplete.js"></script>
+    <script src="internalScripts/userreg.js"></script>
+    <script src="internalScripts/resource.js"></script>
+    <script src="internalScripts/usercenter.js"></script>
+    <script src="internalScripts/usersetting.js"></script>
+    <script src="internalScripts/commercialcategory.js"></script>
+    <script src="internalScripts/boostercategory.js"></script>
+    <script src="internalScripts/boostergovernment.js"></script>
+    <script src="internalScripts/commercialperson.js"></script>
+    <script src="internalScripts/enterprisewindow.js"></script>
+    <script src="internalScripts/enterprisecategory.js"></script>
+    <script src="internalScripts/enterprisedetail.js"></script>
+    <script src="internalScripts/enterprisememberdetail.js"></script>
+    <script src="internalScripts/usercollect.js"></script>
+    <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+    <link href="css/idangerous.swiper.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="page" id="pageHome" data-theme="d" data-dom-cache="true">
+        <div data-role="header">
+            <a data-role="button" data-icon="flat-menu" data-iconpos="notext" href="usersetting.html"></a>
+            <h2>首页</h2>
+            <a data-role="button" data-icon="flat-search" data-iconpos="notext" href="#"></a>
+        </div>
+        <div id="standardNav" data-nav-select="0">
+        </div>
+        <div id="navTemplate" style="display: none;">
+            <div class="swiperNav" data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a id="navNotice">新闻公告</a></li>
+                    <li><a id="navCommercial">商联会</a></li>
+                    <li><a id="navEnterprise">企业窗</a></li>
+                    <li><a id="navBooster">助推器</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="swiper-container" id="pageHome_imgs">
+            <div id="pageHome_topImg" style="height: auto" data-template="pageHome_topImgTemplate" class="swiper-wrapper">
+            </div>
+            <div class="imageTitleDiv">
+                <div id="pageHome_topImgTitle"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiperPaginitionExt"></div>
+        </div>
+        <div id="pageHome_noticeList">
+            <ul id="pageHome_notice" data-role="listview" data-theme="c" data-template="pageHome_noticeImageTemplate"></ul>
+        </div>
+        <div id="pageHome_newsList">
+            <ul id="pageHome_news" data-role="listview" data-theme="c" data-template="pageHome_newsImageTemplate"></ul>
+        </div>
+        <div id="standardFooter" data-role="footer" data-fullscreen="false" data-position="fixed" data-toggle="false" data-theme="c">
+        </div>
+        <div id="footerTemplate" style="display: none;">
+            <div data-role="navbar" data-grid="c" class="ui-group-theme-c">
+                <ul>
+                    <li><a id="footerHome" data-icon="custom" data-iconpos="notext" class="ui-icon-shouye"></a></li>
+                    <li><a id="footerXiaoxi" data-icon="custom" data-iconpos="notext" class="ui-icon-xiaoxi"></a></li>
+                    <li><a id="footerSubscribe" data-icon="custom" data-iconpos="notext" class="ui-icon-subsribe"></a></li>
+                    <li><a id="footerUserCenter" data-icon="custom" data-iconpos="notext" class="ui-icon-gerenzhongxinicon"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /content -->
+        <!-- /footer -->
+        <div style="display: none;">
+            <div id="pageHome_topMenuTemplate">
+                <div class="swiper-slide" data-bind="text:{Title};uniqueindex:{UniqueIndex}">
+                </div>
+            </div>
+        </div>
+        <div style="display: none;">
+            <div id="pageHome_topImgTemplate">
+                <div class="swiper-slide">
+                    <img style="width: 100%" />
+                    <div name="pageHome_topImgId" style="display: none" data-bind="text:{Id}"></div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;">
+            <ul id="pageHome_noticeImageTemplate">
+                <li>
+                    <img>
+                    <h2 data-bind="text:{Title}"></h2>
+                    <p data-bind="text:{Description}" style="white-space: initial; height: 30px;"></p>
+                    <div name="pageHome_noticeImageId" style="display: none" data-bind="text:{Id}"></div>
+                </li>
+            </ul>
+        </div>
+        <div style="display: none;">
+            <ul id="pageHome_newsImageTemplate">
+                <li>
+                    <img>
+                    <h2 data-bind="text:{Title}"></h2>
+                    <p data-bind="text:{Description}" style="white-space: initial; height: 30px;"></p>
+                    <div name="pageHome_newsImageId" style="display: none" data-bind="text:{Id}"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

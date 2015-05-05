@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.4.min.js"></script>
+    <script src="scripts/jquery.md5.js"></script>
+    <script src="scripts/Swipe.js"></script>
+    <script src="internalScripts/common.js"></script>
+    <script src="internalScripts/core.js"></script>
+    <script src="internalScripts/index.js"></script>
+    <script src="internalScripts/home.js"></script>
+    <script src="internalScripts/userlogin.js"></script>
+    <script src="internalScripts/userregcomplete.js"></script>
+    <script src="internalScripts/userreg.js"></script>
+    <script src="internalScripts/resource.js"></script>
+    <script src="internalScripts/usercenter.js"></script>
+    <script src="internalScripts/usersetting.js"></script>
+    <script src="internalScripts/commercialcategory.js"></script>
+    <script src="internalScripts/boostercategory.js"></script>
+    <script src="internalScripts/boostergovernment.js"></script>
+    <script src="internalScripts/commercialperson.js"></script>
+    <script src="internalScripts/enterprisewindow.js"></script>
+    <script src="internalScripts/enterprisecategory.js"></script>
+    <script src="internalScripts/enterprisedetail.js"></script>
+    <script src="internalScripts/enterprisememberdetail.js"></script>
+    <script src="internalScripts/usercollect.js"></script>
+    <script src="internalScripts/noticecategory.js"></script>
+    <script src="internalScripts/noticedetail.js"></script>
+    <link href="css/jquery.mobile.flatui.css" rel="stylesheet" />
+    <link href="css/idangerous.swiper.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="page" id="pageNoticeCategory" data-theme="d" data-toggle="false" data-dom-cache="true">
+        <div data-role="header">
+            <a href="#" data-icon="custom" data-iconpos="notext" data-role="button" data-rel="back" class="header-icon-cback"></a>
+            <h2>通知公告</h2>
+        </div>
+        <div id="standardNav" data-nav-select="0">
+        </div>
+        <div class="swiper-container" id="pageNoticeCategory_imgs">
+            <div id="pageNoticeCategory_topImg" style="height: auto" data-template="pageNoticeCategory_topImgTemplate" class="swiper-wrapper">
+            </div>
+            <div class="imageTitleDiv">
+                <div id="pageNoticeCategory_topImgTitle"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiperPaginitionExt"></div>
+        </div>
+        <div id="pageNoticeCategory_noticeList">
+            <ul id="pageNoticeCategory_notice" data-role="listview" data-theme="c" data-template="pageNoticeCategory_noticeImageTemplate"></ul>
+        </div>
+        <div id="standardFooter" data-role="footer" data-fullscreen="false" data-position="fixed" data-toggle="false" data-theme="c">
+        </div>
+        <div style="display: none;">
+            <div id="pageNoticeCategory_topImgTemplate">
+                <div class="swiper-slide">
+                    <img style="width: 100%" />
+                    <div name="pageNoticeCategory_topImgId" style="display: none" data-bind="text:{Id}"></div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;">
+            <ul id="pageNoticeCategory_noticeImageTemplate">
+                <li>
+                    <img>
+                    <h2 data-bind="text:{Title}"></h2>
+                    <p data-bind="text:{Description}" style="white-space: initial; height: 30px;"></p>
+                    <div name="pageNoticeCategory_noticeImageId" style="display: none" data-bind="text:{Id}"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
