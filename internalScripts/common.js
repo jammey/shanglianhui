@@ -36,16 +36,18 @@ function onDeviceReady() {
         }
     }, false);
 
-    //iOS7 status bar not overlays web view.
-    StatusBar.overlaysWebView(false);
-    StatusBar.backgroundColorByHexString("#0689C7");
 
     navigator.splashscreen.hide();
 
     if (!localStorage.getItem("c_device_platform")) {
         localStorage.setItem("c_device_platform", window.device.platform);
     }
-
+    //iOS7 status bar not overlays web view.
+    if (localStorage.getItem("c_device_platform").toLowerCase() == "ios") {
+        StatusBar.overlaysWebView(false);
+        StatusBar.backgroundColorByHexString("#0689C7");
+    }
+    
     //GetLatestVersion();
 
     checkConnection();
